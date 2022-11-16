@@ -47,8 +47,8 @@ func main() {
 	radio.SetAudioLevel(lvl)
 
 	for {
-		// radio.GetSquelchStatus()
-		// fmt.Printf("%d\r", v)
+		v, _ := radio.GetSquelchStatus()
+		fmt.Printf("%d\r", v)
 
 		time.Sleep(100 * time.Millisecond) // or runtime.Gosched() or similar per @misterbee
 	}

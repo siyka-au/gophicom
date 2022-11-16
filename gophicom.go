@@ -182,8 +182,8 @@ func (radio *IcomRadio) sendCommand(preamble []byte, command []byte, data []byte
 	if err != nil {
 		return nil, err
 	}
-	fmt.Printf(">> ")
-	dumpByteSlice(response)
+	// fmt.Printf(">> ")
+	// dumpByteSlice(response)
 
 	if !bytes.Equal(response, msg) {
 		/*	Again due to the nature of the single-wire bus a
@@ -202,8 +202,8 @@ func (radio *IcomRadio) sendCommand(preamble []byte, command []byte, data []byte
 	if err != nil {
 		return nil, err
 	}
-	fmt.Printf("<< ")
-	dumpByteSlice(response)
+	// fmt.Printf("<< ")
+	// dumpByteSlice(response)
 
 	return response[4 : len(response)-1], nil
 }
