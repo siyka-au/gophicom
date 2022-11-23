@@ -21,8 +21,8 @@ type IcomRadio struct {
 type SquelchStatus uint8
 
 const (
-	Closed SquelchStatus = 0
-	Open
+	Open   SquelchStatus = 0
+	Closed SquelchStatus = 1
 )
 
 const preambleByte byte = 0xfe
